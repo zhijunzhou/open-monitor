@@ -571,16 +571,6 @@ export default {
       }
       this.$root.$httpRequestEntrance.httpRequestEntrance('GET', '/monitor/api/v1/dashboard/search', params, (responseData) => {
         this.allObject = []
-        responseData = [
-          {
-            active: false,
-            id: 0,
-            option_text: 'UAT_IMEG_PRE_APP_imegpre_10.210.219.132:18086:10.210.219.132',
-            option_type_name: '',
-            option_value: 'UAT_IMEG_PRE_APP_imegpre_10.210.219.132:18086:10.210.219.132_process',
-            type: 'process'
-          }
-        ]
         responseData.forEach((item) => {
             if (item.id !== -1) {
               this.allObject.push({
